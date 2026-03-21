@@ -1,10 +1,8 @@
 import numpy as np
 import torch
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
-from collections import Counter
 
 class ModelEvaluator:
     """

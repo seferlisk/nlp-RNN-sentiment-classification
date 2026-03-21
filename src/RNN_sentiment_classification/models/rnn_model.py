@@ -1,7 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
-
 class StackedBiLSTMAttention(nn.Module):
     """
     A Neural Network combining a Trainable Embedding, a Stacked Bidirectional LSTM,
