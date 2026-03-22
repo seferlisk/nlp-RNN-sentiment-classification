@@ -57,7 +57,32 @@ pip install torch pandas numpy scikit-learn matplotlib seaborn jupyter
 
 ## Model Architecture
 
-*(Optional: Add your architecture diagram here)*
+*(architecture diagram)*
+
+```mermaid
+graph TD
+    A[Input: Tokenized Tweet] -->|Shape: Batch, Seq_Len| B(Embedding Layer: 100-dim)
+    
+    subgraph Stacked Bi-LSTM
+    B --> C{Bi-LSTM Layer 1}
+    C --> D{Bi-LSTM Layer 2}
+    end
+    
+    subgraph Attention Mechanism
+    D -->|Hidden States| E[Linear Transformation]
+    E -->|Energy Scores| F[Softmax]
+    F -->|Attention Weights| G((Weighted Sum))
+    D -->|Hidden States| G
+    end
+    
+    G -->|Context Vector| H[Fully Connected Linear Layer]
+    H --> I[Output: Negative, Neutral, Positive]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style I fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#dfd,stroke:#333,stroke-width:2px
+```
+
 `![Model Architecture](path/to/your/architecture_diagram.png)`
 
 The model (`StackedBiLSTMAttention`) consists of four primary components:
