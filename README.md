@@ -13,10 +13,12 @@ The core of this project is a custom-built, object-oriented **PyTorch** pipeline
 
 ## Project Structure
 ```text
-.
 ├── README.md
-├── preprocessed_tweets.csv          # The cleaned text dataset
-├── main_analysis.ipynb              # The primary notebook for running the pipeline
+├──  Datasets/
+├   └── preprocessed_tweets.csv      # The cleaned text dataset
+├──  Notebooks/
+├    └── analysis.ipynb              # The primary notebook for running the pipeline
+├──  Output/
 └── src/
     ├── __init__.py                  # Exposes classes to the notebook
     └── RNN_sentiment_classification/
@@ -48,12 +50,12 @@ pip install torch pandas numpy scikit-learn matplotlib seaborn jupyter
 
 ## Usage
 1. Clone this repository or download the project folder.
-2. Ensure `preprocessed_tweets.csv` is located in the root directory.
+2. Ensure `preprocessed_tweets.csv` is located in the Datasets directory.
 3. Launch Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
-4. Open `main_analysis.ipynb` and run the cells sequentially. The notebook is configured with `%autoreload` so any modifications you make to the `src/` files will automatically be reflected in the notebook.
+4. Open `analysis.ipynb` and run the cells sequentially.
 
 ## Model Architecture
 
@@ -82,8 +84,6 @@ graph TD
     style I fill:#bbf,stroke:#333,stroke-width:2px
     style G fill:#dfd,stroke:#333,stroke-width:2px
 ```
-
-`![Model Architecture](path/to/your/architecture_diagram.png)`
 
 The model (`StackedBiLSTMAttention`) consists of four primary components:
 1. **Embedding Layer**: A trainable layer that maps integer tokens to 100-dimensional dense vectors.
