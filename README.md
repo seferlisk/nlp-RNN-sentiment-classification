@@ -95,3 +95,15 @@ The model (`StackedBiLSTMAttention`) consists of four primary components:
 The model's performance is evaluated using:
 * **Learning Curves**: Tracking Cross-Entropy Loss over epochs for both training and validation sets to monitor convergence and detect overfitting.
 * **Confusion Matrix**: A detailed heatmap showing the true vs. predicted classifications to identify which specific sentiments the model struggles to differentiate (e.g., confusing Neutral with Negative).
+
+## 📜 License
+#### Distributed under the MIT license.
+
+---
+
+## 👤 Author
+***Konstantinos Seferlis***
+
+AI Research & Development
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/konstantinos-seferlis-b16bb7155/)
